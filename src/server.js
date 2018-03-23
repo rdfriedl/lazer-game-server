@@ -17,7 +17,11 @@ app.set("view engine", "pug");
 app.set("views", paths.views);
 app.use("/", views);
 
-app.use(expressStatusMonitor());
+app.use(
+	expressStatusMonitor({
+		websocket: gameServer
+	})
+);
 
 // attach the game server
 gameServer.attach(server);
