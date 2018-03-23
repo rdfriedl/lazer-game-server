@@ -1,0 +1,13 @@
+.circleci/
+.idea/
+
+config/
+coverage/
+node_modules/
+docs/
+test/
+
+.esdoc.json
+.gitignore
+.prettierignore
+CHANGELOG.md

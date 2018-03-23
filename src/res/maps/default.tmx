@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="50" tileheight="50" nextobjectid="73">
+ <tileset firstgid="1" name="walls" tilewidth="50" tileheight="50" tilecount="400" columns="20">
+  <image source="../tilesets/walls.png" width="1000" height="1000"/>
+  <terraintypes>
+   <terrain name="wall" tile="-1"/>
+  </terraintypes>
+  <tile id="0" terrain="0,0,0,0">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="20" terrain=",0,,0">
+   <properties>
+    <property name="model" value="wall"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="21" terrain=",,0,0">
+   <properties>
+    <property name="model" value="wall"/>
+    <property name="rotation" type="int" value="270"/>
+   </properties>
+  </tile>
+  <tile id="22" terrain=",,,0">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="23" terrain=",,0,">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="40" terrain="0,0,,">
+   <properties>
+    <property name="model" value="wall"/>
+    <property name="rotation" type="int" value="90"/>
+   </properties>
+  </tile>
+  <tile id="41" terrain="0,,0,">
+   <properties>
+    <property name="model" value="wall"/>
+    <property name="rotation" type="int" value="180"/>
+   </properties>
+  </tile>
+  <tile id="42" terrain=",0,,">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="43" terrain="0,,,">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="44" terrain="0,0,0,0">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="45" terrain="0,0,0,0">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="100" terrain="0,0,0,">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="101" terrain="0,0,,0">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="120" terrain="0,,0,0">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="121" terrain=",0,0,0">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="125">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="140" terrain=",0,,">
+   <properties>
+    <property name="model" value="slant"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="141" terrain="0,,,">
+   <properties>
+    <property name="model" value="slant"/>
+    <property name="rotation" type="int" value="90"/>
+   </properties>
+  </tile>
+  <tile id="142" terrain=",,0,">
+   <properties>
+    <property name="model" value="slant"/>
+    <property name="rotation" type="int" value="180"/>
+   </properties>
+  </tile>
+  <tile id="143" terrain=",,,0">
+   <properties>
+    <property name="model" value="slant"/>
+    <property name="rotation" type="int" value="270"/>
+   </properties>
+  </tile>
+  <tile id="144">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+  <tile id="145">
+   <properties>
+    <property name="model" value="cube"/>
+    <property name="rotation" type="int" value="0"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="walls" width="30" height="30">
+  <data encoding="csv">
+46,46,45,46,45,45,45,46,46,46,46,46,1,1,45,45,46,46,1,1,1,45,1,1,1,45,1,46,46,46,
+46,1,46,45,46,101,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,41,102,45,
+1,1,46,101,41,142,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,46,
+45,1,101,142,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,45,
+1,101,142,0,0,0,0,0,23,143,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,46,
+45,42,0,0,0,0,0,0,21,121,143,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,45,
+1,42,0,0,0,0,0,0,21,1,121,143,0,0,0,0,0,0,144,22,22,24,0,0,0,0,0,0,21,45,
+1,42,0,0,0,0,0,0,21,1,1,121,22,22,22,24,0,0,21,101,41,142,0,0,0,0,0,0,21,1,
+1,42,0,0,23,24,0,0,21,1,1,46,1,1,1,42,0,0,21,42,0,0,0,0,0,0,0,0,21,46,
+46,42,0,0,141,44,0,0,21,46,45,1,1,45,45,42,0,0,141,142,0,0,0,0,0,0,0,0,21,46,
+45,42,0,0,0,0,0,0,141,41,41,102,46,46,45,42,0,0,0,0,0,0,0,0,0,0,0,0,21,1,
+45,42,0,0,0,0,0,0,0,0,0,141,102,1,46,42,0,0,0,0,0,144,143,0,0,0,0,0,21,1,
+45,42,0,0,0,0,0,0,0,0,0,0,21,45,46,121,143,0,0,0,0,21,42,0,0,0,0,0,21,45,
+1,42,0,0,0,0,0,0,0,0,0,0,21,45,46,45,42,0,0,0,0,141,44,0,0,0,0,0,21,45,
+45,121,24,0,0,0,0,144,143,0,0,0,21,1,1,46,42,0,0,0,0,0,0,0,0,0,0,0,21,45,
+46,45,42,0,0,0,0,141,44,0,0,0,21,46,45,1,42,0,0,0,0,0,0,0,0,0,0,0,21,46,
+45,45,42,0,0,0,0,0,0,0,0,0,21,45,46,1,42,0,0,0,0,0,0,0,0,0,0,0,21,1,
+45,45,42,0,0,0,0,0,0,0,0,0,21,1,1,1,121,22,143,0,0,0,0,0,0,0,0,0,21,1,
+46,1,42,0,0,0,0,0,0,0,0,0,21,45,1,46,1,45,42,0,0,144,22,143,0,0,0,0,21,46,
+1,45,42,0,0,0,144,143,0,0,0,0,141,41,41,102,45,46,42,0,144,122,1,121,22,22,22,22,122,45,
+1,1,42,0,0,0,43,44,0,0,0,0,0,0,0,141,41,41,44,0,21,46,46,1,1,45,46,45,1,46,
+1,45,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,141,41,41,41,41,41,41,102,45,1,
+46,1,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,1,1,
+45,46,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,46,1,
+45,46,121,143,0,0,0,0,0,144,143,0,0,0,0,23,143,0,0,0,0,0,0,0,0,0,0,21,46,1,
+46,1,1,121,143,0,0,0,0,141,142,0,0,0,0,43,142,0,0,0,0,0,0,0,0,0,0,21,1,46,
+45,1,45,1,121,143,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,144,122,45,45,
+46,1,1,45,1,121,22,22,22,22,22,143,0,0,0,0,0,0,0,0,0,0,0,0,0,144,122,1,46,46,
+45,46,46,45,1,46,46,1,45,46,46,121,22,22,22,22,22,22,22,22,22,22,22,22,22,122,1,1,1,45,
+45,46,45,45,46,46,45,1,46,45,46,1,46,1,1,46,45,45,46,1,1,1,45,45,45,46,1,45,1,45
+</data>
+ </layer>
+ <objectgroup name="spawns" visible="0">
+  <object id="1" x="150" y="250" width="108" height="106"/>
+  <object id="2" x="250" y="1100" width="100" height="150"/>
+  <object id="10" x="1200" y="150" width="144" height="150"/>
+  <object id="12" x="1200" y="650" width="150" height="250"/>
+ </objectgroup>
+ <objectgroup name="collision" visible="0">
+  <object id="49" x="400" y="200">
+   <polygon points="0,0 50,0 200,150 400,150 400,400 200,400 150,350 50,350 0,300"/>
+  </object>
+  <object id="50" x="950" y="500">
+   <polygon points="0,0 50,-50 50,-100 100,-100 150,-150 150,-200 0,-200 -50,-150 -50,-50"/>
+  </object>
+  <object id="51" x="1100" y="550">
+   <polygon points="0,0 50,50 50,150 0,150 -50,100 -50,50"/>
+  </object>
+  <object id="52" x="800" y="600">
+   <polygon points="0,0 50,50 50,250 100,250 150,300 150,450 0,450 -50,400 -150,400 -200,350 -200,0"/>
+  </object>
+  <object id="53" x="400" y="700">
+   <polygon points="0,0 50,50 50,100 0,100 -50,50"/>
+  </object>
+  <object id="54" x="300" y="500">
+   <polygon points="0,0 0,-100 -100,-100 -100,-50 -50,0"/>
+  </object>
+  <object id="56" x="350" y="950">
+   <polygon points="0,0 50,50 50,100 -50,100 -50,50"/>
+  </object>
+  <object id="57" x="500" y="1200">
+   <polygon points="0,0 50,50 0,100 -50,50"/>
+  </object>
+  <object id="58" x="750" y="1200">
+   <polygon points="0,0 50,0 100,50 50,100 0,100"/>
+  </object>
+  <object id="59" x="1100" y="900">
+   <polygon points="0,0 50,0 100,50 300,50 300,200 -50,200 -100,150 -100,100"/>
+  </object>
+  <object id="62" x="300" y="100">
+   <polygon points="0,0 0,-100 -300,-100 -300,150 -200,150 -100,50 -50,50"/>
+  </object>
+  <object id="63" x="0" y="1200">
+   <polygon points="0,0 150,0 300,150 550,150 600,200 600,300 0,300"/>
+  </object>
+  <object id="65" x="1250" y="1400">
+   <polygon points="0,0 0,100 250,100 250,-100 100,-100"/>
+  </object>
+  <object id="66" x="100" y="700" width="50" height="500"/>
+  <object id="67" x="50" y="250" width="50" height="450"/>
+  <object id="68" x="300" y="50" width="1100" height="50"/>
+  <object id="69" x="1400" y="100" width="50" height="850"/>
+  <object id="70" x="1350" y="1100" width="50" height="200"/>
+  <object id="71" x="600" y="1400" width="650" height="50"/>
+ </objectgroup>
+</map>

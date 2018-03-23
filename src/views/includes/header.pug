@@ -1,0 +1,12 @@
+mixin link(url, title, icon)
+	li.nav-item
+		a.nav-link(href=url class={active: req.path == url})
+			i(class="fa fa-"+icon)
+			|  #{title}
+
+nav.navbar.navbar-light.bg-faded
+	a.navbar-brand(href="/") #{pkg.name} v#{pkg.version}
+	ul.nav.navbar-nav
+		+link("/","Home", "home")
+		+link("/games","Games", "list")
+		+link("/create-game","Create Game", "plus")

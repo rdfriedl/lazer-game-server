@@ -1,0 +1,75 @@
+html
+	head
+		title #{pkg.name} - Create game
+		include includes/head.pug
+	body
+		.container
+			include includes/header.pug
+			include includes/error.pug
+
+			form(action="/api/create-game")
+				.form-group.row
+					label.col-sm-2.col-form-label.text-sm-right Name*
+					.col-sm-10
+						input.form-control(
+							name="name"
+							placeHolder="the games name"
+							autocomplete="off"
+							maxlength=100
+							required
+						)
+				.form-group.row
+					label.col-sm-2.col-form-label.text-sm-right Map
+					.col-sm-10
+						select.form-control(name="map")
+							each map in maps
+								option #{map.id}
+				.form-group.row
+					label.col-sm-2.col-form-label.text-sm-right Tagline
+					.col-sm-10
+						input.form-control(
+							name="tagline"
+							placeHolder="A short description"
+							autocomplete="off"
+							maxlength=100
+						)
+				.form-group.row
+					label.col-sm-2.col-form-label.text-sm-right Description
+					.col-sm-10
+						textarea.form-control(
+							name="description"
+							maxlength=256
+						)
+				.form-group.row
+					label.col-sm-2.col-form-label.text-sm-right Max Players
+					.col-sm-10
+						input.form-control(
+							type="number"
+							min=1
+							max=20
+							name="maxPlayers"
+							value=10
+						)
+				.form-group.row
+					label.col-sm-2.col-form-label.text-sm-right Password
+					.col-sm-10
+						input.form-control(
+							type="text"
+							name="password"
+							autocomplete="off"
+							maxlength=20
+						)
+				.form-group.row
+					label.col-sm-2.text-sm-right Private
+					.col-sm-10
+						.form-check
+							label.form-check-label
+								input.form-check-input(type="checkbox" name="private")
+								span Make game private
+				.form-group.row
+					.col-sm-10.offset-sm-2
+						.btn-group
+							a.btn.btn-warning(href="/games") Cancel
+							button.btn.btn-success(type="submit") Create
+
+			include includes/footer.pug

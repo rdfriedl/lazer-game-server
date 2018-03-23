@@ -1,0 +1,6 @@
+if req.query.error
+	.alert.alert-danger
+		button.close(data-dismiss="alert")
+			span &times;
+		strong Error
+		span  #{req.query.error}

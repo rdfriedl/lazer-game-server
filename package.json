@@ -1,0 +1,59 @@
+{
+  "name": "lazer-game-server",
+  "version": "0.1.0",
+  "description": "lazer-game-server",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "pretty-quick --staged",
+    "prebuild": "rimraf dist",
+    "build": "babel src -s -D -d dist",
+    "start": "node dist/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon -w src --exec \"babel-node src\"",
+    "predebug": "npm run -s build",
+    "debug": "node --inspect-brk dist/index.js",
+    "format": "prettier --write \"**/*.{js,md,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdfriedl/lazer-game-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdfriedl/lazer-game-server/issues"
+  },
+  "homepage": "https://github.com/rdfriedl/lazer-game-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-status-monitor": "^1.0.1",
+    "lazer-game-core": "^1.0.1",
+    "lodash": "^4.17.5",
+    "p2": "^0.7.1",
+    "pug": "^2.0.3",
+    "regexp-events": "^1.0.2",
+    "shortid": "^2.2.8",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "husky": "^0.14.3",
+    "nodemon": "^1.17.2",
+    "prettier": "^1.11.1",
+    "pretty-quick": "^1.4.1",
+    "rimraf": "^2.6.2"
+  },
+  "prettier": {
+    "useTabs": true,
+    "semi": true,
+    "printWidth": 120
+  }
+}
