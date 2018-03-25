@@ -1,0 +1,101 @@
+extends ../layout/default
+
+block head
+	title #{pkg.name} - Join #{game.info.name}
+	style
+		| input[type=range].background-hue::-webkit-slider-runnable-track{
+		| 	background-image: -moz-linear-gradient(left,  hsl(0,80%,60%) 0%, hsl(36,80%,60%) 10%, hsl(72,80%,60%) 20%, hsl(107,80%,60%) 30%, hsl(144,80%,60%) 40%, hsl(180,80%,60%) 50%, hsl(216,80%,60%) 60%, hsl(252,80%,60%) 70%, hsl(288,80%,60%) 80%, hsl(325,80%,60%) 90%, hsl(359,80%,60%) 100%);
+		| 	background-image: -webkit-linear-gradient(left,  hsl(0,80%,60%) 0%,hsl(36,80%,60%) 10%,hsl(72,80%,60%) 20%,hsl(107,80%,60%) 30%,hsl(144,80%,60%) 40%,hsl(180,80%,60%) 50%,hsl(216,80%,60%) 60%,hsl(252,80%,60%) 70%,hsl(288,80%,60%) 80%,hsl(325,80%,60%) 90%,hsl(359,80%,60%) 100%);
+		| 	background-image: linear-gradient(to right,  hsl(0,80%,60%) 0%,hsl(36,80%,60%) 10%,hsl(72,80%,60%) 20%,hsl(107,80%,60%) 30%,hsl(144,80%,60%) 40%,hsl(180,80%,60%) 50%,hsl(216,80%,60%) 60%,hsl(252,80%,60%) 70%,hsl(288,80%,60%) 80%,hsl(325,80%,60%) 90%,hsl(359,80%,60%) 100%);
+		| }
+
+block content
+	form(action=`/game/${game.id}/play`)
+		.d-flex.justify-content-between.align-items-center
+			h2.my-2 Game: #{game.info.name}
+				small #{game.info.tagline}
+			if !game.info.password
+				button.btn.btn-success(type="submit") Join
+		hr
+		.row
+			.col-sm-3
+				.card
+					.card-header
+						h5 #{game.info.map}
+					img.card-img-bottom.img-fluid(src=`/game/${game.id}/thumbnail`)
+
+				pre #{game.info.description}
+			.col-sm-9
+				if game.info.password
+					.form-group.row
+						label.col-sm-2.col-form-label.text-sm-right Password*
+						.col-sm-10
+							.input-group
+								input.form-control(
+									type="text"
+									name="password"
+									placeHolder="password"
+									autocomplete="off"
+									required
+								)
+								.input-group-btn
+									button.btn.btn-success(type="submit") Join
+
+				.card
+					.card-header(data-toggle="collapse" data-target="#player-settings" style="cursor:pointer;")
+						h5.mb-0 Player Settings
+					#player-settings.collapse.in
+						.card-block
+							.form-group.row
+								label.col-sm-2.col-form-label.text-sm-right Player Name
+								.col-sm-10
+									input.form-control(
+										name="name"
+										placeHolder="Your in-game name"
+										autocomplete="off"
+										maxlength=100
+									)
+							.form-group.row
+								label.col-sm-2.col-form-label.text-sm-right Color Hue
+								.col-sm-10
+									input.form-control.background-hue(
+										type="range"
+										min=0
+										max=360
+										name="color"
+										value=Math.floor(Math.random() * 360)
+									)
+				.card
+					.card-header(data-toggle="collapse" data-target="#graphic-settings" style="cursor:pointer;")
+						h5.mb-0 Graphic Settings
+					#graphic-settings.collapse.in
+						.card-block
+							.form-group.row
+								label.col-sm-2.col-form-label.text-sm-right Shadows
+								.form-check
+									label.form-check-label
+										input.form-check-input(
+											data-keep=true
+											type="checkbox"
+											name="shadows"
+											checked
+										)
+										span Enable Shadows
+		.row
+			.col-xs-12
+				.card
+					.card-header
+						button.btn.btn-success.btn-sm.float-xs-right(type="submit") Join Game
+						h5 Players
+
+					table.table.table-striped.mb-0
+						tbody
+							each player in game.players.players
+								tr
+									th #{player.info.name}
+									td
+										i.fa.fa-square(
+											style={
+												color: `hsl(${player.info.color},80%,60%)`
+											}
+										)

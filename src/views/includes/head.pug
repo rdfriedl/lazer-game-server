@@ -1,26 +1,6 @@
-link(rel="stylesheet" href="//unpkg.com/bootstrap@4.0.0-alpha.5/dist/css/bootstrap-flex.min.css")
-link(rel="stylesheet" href="//unpkg.com/tether/dist/css/tether.min.css")
+link(rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css")
 link(rel="stylesheet" href="//unpkg.com/font-awesome/css/font-awesome.min.css")
 script(src="//unpkg.com/jquery")
-script(src="//unpkg.com/tether")
-script(src="//unpkg.com/bootstrap@4.0.0-alpha.6")
-script.
-	$(document).ready(function(){
-		try{
-			var forms = document.getElementsByTagName('form');
-			for(var i = 0; i < forms.length; i++){
-				var form = forms[i];
-				form.addEventListener('submit', function(event){
-					var form = event.target;
-					var inputs = form.getElementsByTagName('input');
-					for(var k = 0; k < inputs.length; k++){
-						var input = inputs[k];
-						var value = input.type === 'checkbox' ? input.checked : input.value;
-						if(input.getAttribute('name') && !input.hasAttribute('data-keep') && !value)
-							input.setAttribute('name', '');
-					}
-				});
-			}
-		}
-		catch(err){}
-	})
+script(src="//unpkg.com/popper")
+script(src="//unpkg.com/bootstrap/dist/js/bootstrap.min.js")
+script(src="/public/main.js")

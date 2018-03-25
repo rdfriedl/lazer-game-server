@@ -1,13 +1,13 @@
 html
 	head
 		title #{pkg.name} - Create game
-		include includes/head.pug
+		include ../includes/head
 	body
 		.container
-			include includes/header.pug
-			include includes/error.pug
+			include ../includes/header
+			include ../includes/error
 
-			form(action="/api/create-game")
+			form(action="/games/create" method="POST")
 				.form-group.row
 					label.col-sm-2.col-form-label.text-sm-right Name*
 					.col-sm-10
@@ -72,4 +72,4 @@ html
 							a.btn.btn-warning(href="/games") Cancel
 							button.btn.btn-success(type="submit") Create
 
-			include includes/footer.pug
+			include ../includes/footer

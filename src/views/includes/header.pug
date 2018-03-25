@@ -4,10 +4,12 @@ mixin link(url, title, icon)
 			i(class="fa fa-"+icon)
 			|  #{title}
 
-nav.navbar.navbar-light.bg-faded
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
 	a.navbar-brand(href="/") #{pkg.name} v#{pkg.version}
-	ul.nav.navbar-nav
-		+link("/","Home", "home")
-		+link("/games","Games", "list")
-		+link("/create-game","Create Game", "plus")
-		+link("/status","Stats", "area-chart")
+	.collapse.navbar-collapse
+		ul.navbar-nav
+			+link("/","Home", "home")
+			+link("/games","Games", "list")
+			+link("/games/quick-join","Join Game", "enter")
+			+link("/games/create","Create Game", "plus")
+			+link("/status","Stats", "area-chart")

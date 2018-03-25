@@ -1,0 +1,43 @@
+html
+	head
+		title #{pkg.name} - Games
+		include ../includes/head
+	body
+		.container
+			include ../includes/header
+			include ../includes/error
+
+			table.table.table-striped
+				thead.thead-inverse
+					tr
+						th Id
+						th Name
+						th Tagline
+						th Map
+						th Players
+						th
+							.btn-group.btn-group-sm.float-xs-right
+								a.btn.btn-success(href="/games/create")
+									i.fa.fa-plus
+									span  New Game
+								button.btn.btn-info(onclick="{location.reload()}")
+									i.fa.fa-refresh
+									span  Refresh
+				tbody
+					each game in games
+						tr
+							th
+								a(href=`/game/${game.id}`)
+									span #{game.id}
+							td
+								if game.info.password
+									i.fa.fa-lock
+								span  #{game.info.name}
+							td #{game.info.tagline}
+							td #{game.info.map}
+							td #{game.players.players.length}/#{game.config.player.max}
+							td
+								.btn-group.float-xs-right
+									a.btn.btn-success.btn-sm(href=`/game/${game.id}/play`) Join
+
+			include ../includes/footer

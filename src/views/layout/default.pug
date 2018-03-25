@@ -1,0 +1,13 @@
+html
+	head
+		title #{pkg.name}
+		include ../includes/head.pug
+		block head
+	body
+		.container
+			include ../includes/header.pug
+			include ../includes/error.pug
+
+			block content
+
+			include ../includes/footer.pug

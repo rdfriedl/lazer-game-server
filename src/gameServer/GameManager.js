@@ -1,6 +1,6 @@
 import { Emitter } from "regexp-events";
 import { Game } from "lazer-game-core";
-import { generate as shortID } from "shortid";
+import { mapManager } from "./MapManager";
 
 export default class GameManager extends Emitter {
 	constructor() {
@@ -20,13 +20,31 @@ export default class GameManager extends Emitter {
 
 	getGame(id) {
 		if (id instanceof Game) return this.games.includes(id) ? id : undefined;
-		else return this.games.find(game => game.id == id);
+		else return this.games.find(game => game.id === id);
 	}
 
-	createGame(id = shortID()) {
-		if (this.getGame(id)) return;
-		let game = new Game(id);
+	createGame(data = {}) {
+		let game = new Game();
+
 		game.isMaster = true;
+		if (data.maxPlayers > 0) {
+			game.config.player.max = data.maxPlayers;
+		}
+
+		Object.assign(game.info, {
+			name: data.name,
+			tagline: data.tagline || "",
+			description: data.description || "",
+			private: data.private || false
+		});
+
+		let mapId = data.mapId || mapManager.maps[Math.floor(Math.random() * mapManager.maps.length)].id;
+		if (!mapManager.hasMap(mapId)) {
+			throw new Error("No map with id: " + mapId);
+		}
+		game.info.map = mapId;
+		game.map.fromJSON(mapManager.getMap(mapId).json);
+
 		this.games.push(game);
 		this.emit("game-created", game);
 		return game;

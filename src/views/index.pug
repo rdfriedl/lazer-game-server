@@ -1,10 +1,12 @@
-html
-	head
-		title #{pkg.name}
-		include includes/head.pug
-	body
-		.container
-			include includes/header.pug
-			include includes/error.pug
+extends layout/default
 
-			include includes/footer.pug
+block content
+	.row
+		.col-8
+		.col-4
+			.card.text-center
+				.card-header Quick Join
+				.card-body
+					h5.card-title Special title treatment
+					p.card-text With supporting text below as a natural lead-in to additional content
+					a.btn.btn-primary(href="/games/quick-join") Join Game
