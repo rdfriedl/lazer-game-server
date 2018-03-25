@@ -1,6 +1,7 @@
 import { Emitter } from "regexp-events";
 import { Game } from "lazer-game-core";
 import { mapManager } from "./MapManager";
+import namor from "namor";
 
 export default class GameManager extends Emitter {
 	constructor() {
@@ -32,7 +33,7 @@ export default class GameManager extends Emitter {
 		}
 
 		Object.assign(game.info, {
-			name: data.name,
+			name: data.name || namor.generate(),
 			tagline: data.tagline || "",
 			description: data.description || "",
 			private: data.private || false

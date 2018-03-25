@@ -1,10 +1,9 @@
 import { Router } from "express";
 import { mapManager } from "../gameServer/MapManager";
 import { gameManager } from "../gameServer/GameManager";
-import Hashids from "hashids";
+import namor from "namor";
 
 const router = new Router();
-const gameIds = new Hashids();
 
 router.use((req, res, next) => {
 	Object.assign(res.locals, {
@@ -31,7 +30,9 @@ router.all("/quick-join", (req, res) => {
 });
 
 router.get("/create", (req, res) => {
-	res.render("games/create");
+	res.render("games/create", {
+		defaultName: namor.generate()
+	});
 });
 router.post("/create", (req, res) => {
 	let game = gameManager.createGame({
