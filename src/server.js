@@ -23,7 +23,9 @@ app.set("views", paths.views);
 app.use(cookieParser(process.env.APP_SECRET));
 app.use(
 	session({
-		secret: process.env.APP_SECRET
+		secret: process.env.APP_SECRET,
+		resave: false,
+		saveUninitialized: false
 	})
 );
 app.use(flash());
@@ -37,7 +39,7 @@ app.use("/", routes);
 // start the server
 const server = app.listen(app.get("port"), app.get("host"), () => {
 	console.log(
-		"%s App is running at http://%s:%d in %s mode",
+		"%s Server is running at http://%s:%d in %s mode",
 		chalk.green("✓"),
 		app.get("host"),
 		app.get("port"),
