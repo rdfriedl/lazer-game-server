@@ -38,7 +38,9 @@ router.all("/:gameId/play", (req, res) => {
 	if (game.players.players.length >= game.config.player.max)
 		throw new Error(`This game has a limit of ${game.config.player.max} players`);
 
-	res.redirect(process.env.CLIENT_URL + "/" + res.locals.game.id + "?" + qs.stringify(req.query));
+	const query = Object.assign({}, { game: res.locals.game.id }, req.query);
+
+	res.redirect(process.env.CLIENT_URL + "?" + qs.stringify(query));
 });
 
 export default router;
